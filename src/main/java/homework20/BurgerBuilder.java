@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class BurgerBuilder {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Добро пожаловать в Burger Builder!");
         BurgerSize selectedSize = selectSize(scanner);
         MeatType selectedMeatType = selectMeatType(scanner);
         Ingredient[] selectedIngredients = selectIngredients(scanner);
