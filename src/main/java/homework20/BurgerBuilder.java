@@ -37,9 +37,9 @@ public class BurgerBuilder {
         BurgerSize selectedSize = BurgerSize.values()[sizeChoice];
         MeatType selectedMeatType = MeatType.values()[meatChoice];
         Ingredient[] finalIngredients = selectedIngredients.toArray(new Ingredient[0]);
-        Burger burger = new Burger(selectedSize, selectedMeatType, finalIngredients);
-        burger.printInfo();
+        // Рассчитываем стоимость бургера с использованием BurgerCalculator
+        double totalPrice = BurgerCalculator.calculatePrice(selectedSize, selectedMeatType, finalIngredients);
+        System.out.println("Total Price: $" + totalPrice);
         scanner.close();
     }
 }
-
