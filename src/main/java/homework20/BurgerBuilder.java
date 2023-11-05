@@ -24,7 +24,6 @@ public class BurgerBuilder {
             for (Ingredient ingredient : Ingredient.values()) {
                 System.out.println(ingredient.ordinal() + ". " + ingredient + " - $" + ingredient.getPrice());
             }
-            System.out.println("Введите 'Готово' для завершения.");
             String ingredientChoice = scanner.next();
             if (ingredientChoice.equalsIgnoreCase("Готово")) {
                 break;
@@ -37,9 +36,9 @@ public class BurgerBuilder {
         BurgerSize selectedSize = BurgerSize.values()[sizeChoice];
         MeatType selectedMeatType = MeatType.values()[meatChoice];
         Ingredient[] finalIngredients = selectedIngredients.toArray(new Ingredient[0]);
-        // Рассчитываем стоимость бургера с использованием BurgerCalculator
+
         double totalPrice = BurgerCalculator.calculatePrice(selectedSize, selectedMeatType, finalIngredients);
-        System.out.println("Total Price: $" + totalPrice);
+        System.out.println("Сумма: $" + totalPrice);
         scanner.close();
     }
 }
