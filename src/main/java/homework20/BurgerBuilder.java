@@ -8,16 +8,30 @@ public class BurgerBuilder {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Добро пожаловать в Burger Builder!");
+        BurgerSize selectedSize = selectSize(scanner);
+        MeatType selectedMeatType = selectMeatType(scanner);
+        Ingredient[] selectedIngredients = selectIngredients(scanner);
+        Burger burger = new Burger(selectedSize, selectedMeatType, selectedIngredients);
+        burger.printInfo();
+        scanner.close();
+    }
+    private static BurgerSize selectSize(Scanner scanner) {
         System.out.println("Выберите размер бургера:");
         for (BurgerSize size : BurgerSize.values()) {
             System.out.println(size.ordinal() + ". " + size + " - $" + size.getPrice());
         }
         int sizeChoice = scanner.nextInt();
+        return BurgerSize.values()[sizeChoice];
+    }
+    private static MeatType selectMeatType(Scanner scanner) {
         System.out.println("Выберите тип мяса:");
         for (MeatType meatType : MeatType.values()) {
             System.out.println(meatType.ordinal() + ". " + meatType + " - $" + meatType.getPrice());
         }
         int meatChoice = scanner.nextInt();
+        return MeatType.values()[meatChoice];
+    }
+    private static Ingredient[] selectIngredients(Scanner scanner) {
         List<Ingredient> selectedIngredients = new ArrayList<>();
         System.out.println("Добавьте ингредиенты:");
         while (true) {
@@ -33,12 +47,6 @@ public class BurgerBuilder {
                 selectedIngredients.add(Ingredient.values()[ingredientIndex]);
             }
         }
-        BurgerSize selectedSize = BurgerSize.values()[sizeChoice];
-        MeatType selectedMeatType = MeatType.values()[meatChoice];
-        Ingredient[] finalIngredients = selectedIngredients.toArray(new Ingredient[0]);
-
-        double totalPrice = BurgerCalculator.calculatePrice(selectedSize, selectedMeatType, finalIngredients);
-        System.out.println("Сумма: $" + totalPrice);
-        scanner.close();
+        return selectedIngredients.toArray(new Ingredient[0]);
     }
 }
