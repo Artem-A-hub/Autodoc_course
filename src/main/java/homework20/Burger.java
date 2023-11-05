@@ -22,6 +22,6 @@ class Burger {
         for (Ingredient ingredient : ingredients) {
             System.out.println("Набор ингредиентов:" + ingredient);
         }
-        System.out.println("Сумма: $" + calculatePrice());
+        System.out.println("Сумма: $" + calculatePrice());//
     }
 }
