@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import static homework20.BurgerConstructor.*;
 
-public class BurgerBuilder {/
+public class BurgerBuilder {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         BurgerSize selectedSize = selectSize(scanner);
