@@ -14,6 +14,6 @@ public class BurgerBuilder {
         Ingredient[] selectedIngredients = selectIngredients(scanner);
         Burger burger = new Burger(selectedSize, selectedMeatType, selectedIngredients);
         burger.printInfo();
-        scanner.close();
+        scanner.close();d
     }
 }
