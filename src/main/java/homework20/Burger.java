@@ -24,4 +24,5 @@ class Burger {
         }
         System.out.println("Сумма: $" + calculatePrice());
     }
+
 }
