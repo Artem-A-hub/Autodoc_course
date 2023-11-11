@@ -1,0 +1,17 @@
+https://rozetka.com.ua/ua/
+
+Логотип:
+CSS: header div a[class='header__logo']
+XPATH: //div[@class='header-layout']//picture//img
+
+Кнопка "Каталог":
+CSS: header div button#fat-menu
+XPATH: //div//*[@id='fat-menu']
+
+Кнопка микрофон (в инпуте поиска):
+CSS: header div button[class='search-form__microphone ng-star-inserted']
+XPATH: //div//button[@class='search-form__microphone ng-star-inserted']
+
+Кнопка корзины:
+CSS: header li[class='header-actions__item header-actions__item--cart'] button[class='header__button ng-star-inserted']
+XPATH: //div//li[@class='header-actions__item header-actions__item--cart']//button
