@@ -14,4 +14,4 @@ XPATH: //div//button[@class='search-form__microphone ng-star-inserted']
 
 Кнопка корзины:
 CSS: header li[class='header-actions__item header-actions__item--cart'] button[class='header__button ng-star-inserted']
-XPATH: //div//li[@class='header-actions__item header-actions__item--cart']//button/
+XPATH: //div//li[@class='header-actions__item header-actions__item--cart']//button
