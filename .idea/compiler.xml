@@ -9,8 +9,5 @@
         <module name="Autodoc_course" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Autodoc_course" target="15" />
-    </bytecodeTargetLevel>
   </component>
 </project>
