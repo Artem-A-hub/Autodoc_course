@@ -6,7 +6,7 @@
 6. Перейти в корзину
 7. Проверить, что добавился правильный товар (сравнить тайтлы)*/
 
-package homework23;
+package homeworks.homework23;
 
 import init.WebDriverInit;
 import org.openqa.selenium.By;
