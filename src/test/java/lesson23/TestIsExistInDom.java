@@ -16,7 +16,7 @@ public class TestIsExistInDom extends WebDriverInit {
     @Test
     public void firstTest() {
         driver.get("https://rozetka.com.ua/");
-        List<WebElement> logo = driver.findElements(By.xpath("/a[@class=‘header__logo’]"));
+        List<WebElement> logo = driver.findElements(By.xpath("//img[@alt='Rozetka Logo']"));
         if (logo.size() > 0) {
             System.out.println("Logo appeared");
         } else {

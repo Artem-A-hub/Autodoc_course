@@ -35,7 +35,7 @@ public class FirstTest {
                 By.xpath("//button[contains(@class, 'search-form__submit')]"));
         btnSearch.click();
         WebElement tittleOfFirstProduct = driver.findElement(
-                By.xpath("(//span[@class='goods-tile__title'])[1]"));
+                By.xpath("(//rz-grid//span[@class='goods-tile__title'])[1]"));
         String tittle = tittleOfFirstProduct.getText().trim();
 
 //        if (tittle.contains("Mac")) {
