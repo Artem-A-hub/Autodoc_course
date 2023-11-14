@@ -11,6 +11,7 @@ package homework23;
 import init.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,12 +25,12 @@ public class Rozetka extends WebDriverInit {
         // Шаг 1: Открыть https://rozetka.com.ua/
         driver.get("https://rozetka.com.ua/");
         // Шаг 2: Перейти в раздел «Компьютеры и ноутбуки»
-        WebElement computersLink = driver.findElement(
-                By.xpath("//li[1]//a[@class='menu-categories__link'][1]"));
+        WebElement computersLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("(//rz-app-fat-menu-tablet//a[contains(@class, 'main-categories__link ng-star-inserted')])[1]")));
         computersLink.click();
         // Шаг 3: Перейти в раздел «Ноутбуки»
-        WebElement laptopsLink = driver.findElement(
-                By.xpath("//a[@class='tile-cats__picture ng-star-inserted' and contains(@title, 'Ноутбуки')]"));
+        WebElement laptopsLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//a[@class='tile-cats__picture ng-star-inserted' and contains(@title, 'Ноутбуки')]")));
         laptopsLink.click();
         // Шаг 4: Добавить первый товар в корзину
         WebElement addToCartButton = driver.findElement(
