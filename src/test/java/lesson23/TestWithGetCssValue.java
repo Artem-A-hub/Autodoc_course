@@ -24,6 +24,6 @@ public class TestWithGetCssValue extends InitialWebDriver {
         WebElement inStockLabel = driver.findElement(
                 By.xpath("//p[contains(@class, 'status-label--green')]"));
         String colorOfInStockLabel = inStockLabel.getCssValue("color");
-        Assert.assertEquals(colorOfInStockLabel, EXPECTED_LABEL_COLOR, "Colors doesn’t equals");
+        Assert.assertEquals(colorOfInStockLabel, EXPECTED_LABEL_COLOR, "Colors does’t equals");
     }
 }
