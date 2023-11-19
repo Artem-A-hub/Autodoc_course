@@ -1,12 +1,12 @@
 package lesson23;
 
-import init.WebDriverInit;
+import init.InitialWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestWithGetAttrr extends WebDriverInit {
+public class TestWithGetAttrr extends InitialWebDriver {
 
     final String EXPECTED_TITTLE = "Ноутбук Apple MacBook Air 13\" M1 8/256GB 2020 (MGN63) Space Gray";
 

@@ -24,6 +24,7 @@ public class Rozetka extends WebDriverInit {
     public void RozetkaBuyProduct() {
         // Шаг 1: Открыть https://rozetka.com.ua/
         driver.get("https://rozetka.com.ua/");
+        driver.manage().window().maximize(); // разворачивает окно браузера на весь экран
         // Шаг 2: Перейти в раздел «Компьютеры и ноутбуки»
         WebElement computersLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("(//rz-app-fat-menu-tablet//a[contains(@class, 'main-categories__link ng-star-inserted')])[1]")));
