@@ -38,7 +38,7 @@ public class Rozetka extends WebDriverInit {
                 By.xpath("(//div//button[@class='buy-button goods-tile__buy-button ng-star-inserted' and @type='button'])[1]")));
         addToCartButton.click();
         // Шаг 5: Проверить, что в корзину добавлен один товар
-        WebElement cartCount = webDriverWait.until(ExpectedConditions.elementToBeClickable( //visibilityOfElementLocated
+        WebElement cartCount = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//div//span[@class='badge badge--green ng-star-inserted' and contains(.,'1')]")));
         String actualCount = cartCount.getText();
         Assert.assertEquals(actualCount, EXPECTED_COUNT, "Count 1 doesn’t equals");
