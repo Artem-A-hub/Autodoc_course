@@ -46,7 +46,7 @@ public class Rozetka extends WebDriverInit {
         WebElement goToCartButton = driver.findElement(
                 By.xpath("//div//button[@class='header__button ng-star-inserted header__button--active']"));
         goToCartButton.click();
-        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='cart-product__body']"))); //1Добавил ожидание, т.к. "1" в значке корзины не успевает появиться
+        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='cart-product__body']"))); //Добавил ожидание, т.к. "1" в значке корзины не успевает появиться
         // Шаг 7: Проверить, что добавлен правильный товар (сравнение тайтлов)
         WebElement productTitle = driver.findElement(
                 By.xpath("//div[@class='cart-product__body']//a[@class='cart-product__title'][1]"));
