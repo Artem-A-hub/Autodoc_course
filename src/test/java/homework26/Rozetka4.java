@@ -16,18 +16,19 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static java.lang.Thread.sleep;
+
 public class Rozetka4 extends WebDriverInit {
     @Test
     public void RozetkaBuyProduct() throws InterruptedException {
-/*        // Шаг 1: Открыть https://rozetka.com.ua/
+        // Шаг 1: Открыть https://rozetka.com.ua/
         driver.manage().window().maximize();
         driver.get("https://rozetka.com.ua/ua/promo/black-friday/");
+        changeCFCookie("yC0E9vFohPtilVZjcXmegMu6RaYyBaB8nRZ5.dEvBRI-1701112422-0-1-63416de4.ac13a8bb.34403204-0.2.1701112422");
         // Шаг 2: В сайд меню перейти в раздел Ноутбуки и компьютеры
         WebElement computersLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//span[contains(@class, 'categories-filter__link-title') and contains(text(), \"Ноутбуки, планшети та комп'ютерна периферія\")]")));
-        // Используем Actions для выполнения клика
-        Actions actions = new Actions(driver);
-        actions.moveToElement(computersLink).click().perform();
+        computersLink.click();
         // Шаг 3: Перейти в раздел «Ноутбуки»
         WebElement laptopsLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//span[contains(@class, 'categories-filter__link') and text()=\"Ноутбуки\"]")));
@@ -44,19 +45,18 @@ public class Rozetka4 extends WebDriverInit {
         // Шаг 5. Примерить фильтр “Цена” установить цену до - 100000
         WebElement okButton = driver.findElement(
                 By.cssSelector("button.slider-filter__button"));
-        okButton.click();*/
-        driver.manage().window().maximize();
-        driver.get("https://rozetka.com.ua/ua/promo/cybermonday/?price=7999-10000&section_id=80004&seller=rozetka\n");
+        okButton.click();
+        sleep(5000);
         // Шаг 6. Найти элемент с плашкой "Акция"
         WebElement elementWithBlackFridayLabel = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//div/span[contains(@class, 'goods-tile__label promo-label promo-label_type_action ng-star-inserted')]")));
         // Шаг 6.1 Перейти на продуктовую первого товара с плашкой "Акция"
         WebElement productWithBlackFriday = webDriverWait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//a[@class='goods-tile__heading ng-star-inserted']")));
+                By.xpath("(//rz-catalog//a[@title])[1]")));
         productWithBlackFriday.click();
         // Шаг 7. Проверить что на продуктовой странице отображается плашка “Акция” (Акция)
         WebElement blackFridayLabel = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("//div[@class='product-about__left']//span[contains(@class, 'promo-label_type_black_friday')]")));
+                By.xpath("//p[@class='product-price__small ng-star-inserted']")));
         if (blackFridayLabel.isDisplayed()) {
             System.out.println("Плашка 'Акция' отображается на странице.");
         } else {
