@@ -25,6 +25,7 @@ public class Rozetka3 extends WebDriverInit {
 
     final String EXPECTED_TITLE = "Положення про обробку і захист персональних даних | ROZETKA";
     final String EXPECTED_TITLE2 = "Захист персональних даних.";
+
     @Test
     public void RozetkaLinks() throws InterruptedException {
         // Шаг 1: Открыть https://rozetka.com.ua/
