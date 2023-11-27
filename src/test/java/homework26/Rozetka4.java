@@ -14,7 +14,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
+//
 import static java.lang.Thread.sleep;
 
 public class Rozetka4 extends WebDriverInit {
