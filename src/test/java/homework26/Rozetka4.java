@@ -19,13 +19,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static java.lang.Thread.sleep;
 
 public class Rozetka4 extends WebDriverInit {
+
+    String cookieValue = "yC0E9vFohPtilVZjcXmegMu6RaYyBaB8nRZ5.dEvBRI-1701112422-0-1-63416de4.ac13a8bb.34403204-0.2.1701112422";
+
     @Test
     public void RozetkaBuyProduct() throws InterruptedException {
         // Шаг 1: Открыть https://rozetka.com.ua/
         driver.manage().window().maximize();
         driver.get("https://rozetka.com.ua/ua/promo/black-friday/");
-        changeCFCookie("yC0E9vFohPtilVZjcXmegMu6RaYyBaB8nRZ5.dEvBRI-1701112422-0-1-63416de4.ac13a8bb.34403204-0.2.1701112422");
-        // Шаг 2: В сайд меню перейти в раздел Ноутбуки и компьютеры
+        changeCFCookie(cookieValue);        // Шаг 2: В сайд меню перейти в раздел Ноутбуки и компьютеры
         WebElement computersLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//span[contains(@class, 'categories-filter__link-title') and contains(text(), \"Ноутбуки, планшети та комп'ютерна периферія\")]")));
         computersLink.click();
@@ -57,10 +59,7 @@ public class Rozetka4 extends WebDriverInit {
         // Шаг 7. Проверить что на продуктовой странице отображается плашка “Акция” (Акция)
         WebElement blackFridayLabel = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//p[@class='product-price__small ng-star-inserted']")));
-        if (blackFridayLabel.isDisplayed()) {
-            System.out.println("Плашка 'Акция' отображается на странице.");
-        } else {
-            System.out.println("Плашка 'Акция' не отображается на странице.");
-        }
+        assert blackFridayLabel.isDisplayed() : "Плашка 'Акция' не отображается на странице.";
+        System.out.println("Плашка 'Акция' отображается на странице.");
     }
 }
