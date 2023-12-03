@@ -15,11 +15,12 @@ public class Rozetka5 extends InitialWebDriver {
 
     final String EXPECTED_TITLE = "Ноутбук Lenovo IdeaPad Slim 5 16IAH8 (83BG001ARA) Cloud Grey / 16\" IPS WUXGA / Intel Core i5-12450H / RAM 16 ГБ / SSD 512 ГБ / Підсвічування клавіатури / Зарядка через Type-C";
     final String URL = "https://rozetka.com.ua/ua/";
+    String cookieValue = "yC0E9vFohPtilVZjcXmegMu6RaYyBaB8nRZ5.dEvBRI-1701112422-0-1-63416de4.ac13a8bb.34403204-0.2.1701112422";
 
     @Test
     public void buyFirstProduct() {
         driver.get(URL);
-
+        changeCFCookie(cookieValue);
         MainPage mainPage = new MainPage(driver);
         mainPage.navigateToComputersAndLaptops().navigateToLaptops().addFirstProductToCart();
 
@@ -29,4 +30,3 @@ public class Rozetka5 extends InitialWebDriver {
         Assert.assertEquals(actualProduct, EXPECTED_TITLE);
     }
 }
-
