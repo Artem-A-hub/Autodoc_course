@@ -1,9 +1,9 @@
 package pattern.pageobject.selenium;
 
 import org.openqa.selenium.WebDriver;
-import pattern.pageobject.selenium.ICartPage;
+import org.testng.Assert;
 
-public class MainPage extends pattern.pagebject.selenium.MainPageLocators implements ICartPage {
+public class MainPage extends pattern.pageobject.selenium.MainPageLocators implements ICartPage {
 
     private WebDriver driver;
 
@@ -11,7 +11,7 @@ public class MainPage extends pattern.pagebject.selenium.MainPageLocators implem
         this.driver = driver;
     }
 
-    public MainPage checkingCart(WebDriver driver){
+    public MainPage checkingCart(WebDriver driver) {
         checkingCart(this.driver);
         return this;
     }
@@ -26,8 +26,39 @@ public class MainPage extends pattern.pagebject.selenium.MainPageLocators implem
         return this;
     }
 
-    public pattern.pagebject.selenium.SearchPage clickBtnSearch() {
+    public pattern.pageobject.selenium.SearchPage clickBtnSearch() {
         driver.findElement(btnSearch).click();
-        return new pattern.pagebject.selenium.SearchPage(driver);
+        return new pattern.pageobject.selenium.SearchPage(driver);
+    }
+
+    public MainPage navigateToComputersAndLaptops() {
+        driver.findElement(computersAndLaptopsLink).click();
+        return this;
+    }
+
+    public MainPage navigateToLaptops() {
+        driver.findElement(laptopsLink).click();
+        return this;
+    }
+
+    public MainPage addFirstProductToCart() {
+        driver.findElement(addFirstProductToCart).click();
+        return this;
+    }
+
+    public MainPage checkCountBasketInHeader() {
+        driver.findElement(actualCountInCartHeader).click();
+        return this;
+    }
+
+    public MainPage clickGoToCart() {
+        driver.findElement(goToCart).click();
+        return this;
+    }
+
+    public String checkAddedProduct(WebDriver driver, String expectedProductTitle) {
+        String actualProductTitle = driver.findElement(actualProductTitleInBasket).getText();
+        Assert.assertEquals(actualProductTitle, expectedProductTitle);
+        return actualProductTitle;
     }
 }

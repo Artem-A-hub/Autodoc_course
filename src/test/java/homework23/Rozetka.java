@@ -19,12 +19,14 @@ public class Rozetka extends WebDriverInit {
 
     final String EXPECTED_COUNT = "1";
     final String EXPECTED_TITLE = "Ноутбук Lenovo IdeaPad 3 15IAU7 (82RK00TWRA) Arctic Grey / 15.6\" IPS Full HD / Intel Core i5-1235U / RAM 16 ГБ / SSD 512 ГБ / Підсвічування клавіатури";
+    String cookieValue = "yC0E9vFohPtilVZjcXmegMu6RaYyBaB8nRZ5.dEvBRI-1701112422-0-1-63416de4.ac13a8bb.34403204-0.2.1701112422";
 
     @Test
     public void RozetkaBuyProduct() {
         // Шаг 1: Открыть https://rozetka.com.ua/
         driver.manage().window().maximize(); // разворачивает окно браузера на весь экран
         driver.get("https://rozetka.com.ua/");
+        changeCFCookie(cookieValue);
         // Шаг 2: Перейти в раздел «Компьютеры и ноутбуки»
         WebElement computersLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("(//div/ul/li//a[@class='menu-categories__link'])[1]")));

@@ -27,7 +27,8 @@ public class Rozetka4 extends WebDriverInit {
         // Шаг 1: Открыть https://rozetka.com.ua/
         driver.manage().window().maximize();
         driver.get("https://rozetka.com.ua/ua/promo/black-friday/");
-        changeCFCookie(cookieValue);        // Шаг 2: В сайд меню перейти в раздел Ноутбуки и компьютеры
+        changeCFCookie(cookieValue);
+        // Шаг 2: В сайд меню перейти в раздел Ноутбуки и компьютеры
         WebElement computersLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//span[contains(@class, 'categories-filter__link-title') and contains(text(), \"Ноутбуки, планшети та комп'ютерна периферія\")]")));
         computersLink.click();

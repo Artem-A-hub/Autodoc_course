@@ -10,5 +10,4 @@ public interface ICartPage {
         String actualText = driver.findElement(By.xpath("")).getAttribute("innerText");
         Assert.assertEquals(actualText, "ExpectedText");
     }
-
 }

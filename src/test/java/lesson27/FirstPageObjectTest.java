@@ -8,8 +8,7 @@ import pattern.pageobject.selenium.MainPage;
 public class FirstPageObjectTest extends InitialWebDriver {
 
     final String EXPECTED_TITTLE = "Ноутбук Apple MacBook Air 13\" M1 8/256GB 2020 (MGN63) Space Gray";
-    final String URL = "https://rozetka.com.ua/";
-
+    final String URL = "https://rozetka.com.ua/ua/";
 
     @Test
     public void firstTest() {
@@ -19,5 +18,4 @@ public class FirstPageObjectTest extends InitialWebDriver {
                 .getTittleText();
         Assert.assertEquals(actualTittle, EXPECTED_TITTLE);
     }
-
 }
