@@ -47,7 +47,8 @@ public class MainPage extends pattern.pageobject.selenium.MainPageLocators imple
     }
 
     public MainPage checkCountBasketInHeader() {
-        driver.findElement(actualCountInCartHeader).click();
+        String actualItemCount = driver.findElement(actualCountInCartHeader).getText();
+        Assert.assertEquals(actualItemCount, "1", "В корзину добавлен не 1 товар");
         return this;
     }
 
