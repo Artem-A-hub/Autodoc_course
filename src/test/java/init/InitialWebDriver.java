@@ -1,7 +1,7 @@
 
 package init;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+/*import io.github.bonigarcia.wdm.WebDriverManager;*/
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +19,7 @@ public class InitialWebDriver {
 
     @BeforeClass
     public void initBefore() {
-        WebDriverManager.chromedriver().setup();
+/*        WebDriverManager.chromedriver().setup();*/
         ChromeOptions options = new ChromeOptions();
         //Отключает уведомления в браузере.
         options.addArguments("--disable-notifications");

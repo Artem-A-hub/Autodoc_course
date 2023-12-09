@@ -1,6 +1,6 @@
 package lesson22.waits;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+/*import io.github.bonigarcia.wdm.WebDriverManager;*/
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,7 +15,7 @@ public class ImplicitlyWaitExample {
 
     @BeforeTest
     public void initDriver() {
-        WebDriverManager.chromedriver().setup();
+/*        WebDriverManager.chromedriver().setup();*/
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }

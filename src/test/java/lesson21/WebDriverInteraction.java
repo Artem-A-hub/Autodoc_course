@@ -1,6 +1,6 @@
 package lesson21;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+/*import io.github.bonigarcia.wdm.WebDriverManager;*/
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +15,7 @@ public class WebDriverInteraction {
 
     @BeforeTest
     public void initDriver() {
-        WebDriverManager.chromedriver().setup();
+/*        WebDriverManager.chromedriver().setup();*/
         driver = new ChromeDriver();
     }
 
