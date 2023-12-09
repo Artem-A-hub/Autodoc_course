@@ -1,4 +1,4 @@
-package pattern.pageobject.selenium;
+package pattern.pagebject.selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,10 +17,10 @@ public class SearchPage {
     }
 
 
-    public pattern.pageobject.selenium.ProductPage clickOnProductTittleByIndex(int tittleIndex) {
+    public pattern.pagebject.selenium.ProductPage clickOnProductTittleByIndex(int tittleIndex) {
         List<WebElement> tittles = driver.findElements(firstProductTittle);
         tittles.get(tittleIndex).click();
-        return new pattern.pageobject.selenium.ProductPage(driver);
+        return new pattern.pagebject.selenium.ProductPage(driver);
     }
 
 }

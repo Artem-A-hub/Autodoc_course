@@ -2,7 +2,7 @@ package lesson29;
 
 import init.InitialSelenide;
 import org.testng.annotations.Test;
-import pattern.pageobject.selenide.MainPageLogic;
+import pattern.pagebject.selenide.MainPageLogic;
 
 public class SelindePageObjectTest extends InitialSelenide {
 

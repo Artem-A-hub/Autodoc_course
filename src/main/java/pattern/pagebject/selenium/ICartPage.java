@@ -1,4 +1,4 @@
-package pattern.pageobject.selenium;
+package pattern.pagebject.selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

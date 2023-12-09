@@ -1,6 +1,10 @@
-package pattern.pageobject.selenium;
+package pattern.pagebject.selenium;
 
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+
+import static com.codeborne.selenide.Selectors.byXpath;
+import static com.codeborne.selenide.Selenide.$;
 
 public class MainPageLocators {
 
@@ -18,4 +22,7 @@ public class MainPageLocators {
     protected By actualProductTitleInBasket = By.xpath("//div[@class='cart-product__body']//a[@class='cart-product__title'][1]");
 
     protected By goToCart = By.xpath("//div//button[@class='header__button ng-star-inserted header__button--active']");
+
+    SelenideElement laptopSubCategory = $(byXpath("(//a[contains(@href, 'c80004/')])[1]"));
+
 }

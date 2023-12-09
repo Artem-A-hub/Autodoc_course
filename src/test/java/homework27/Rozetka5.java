@@ -10,7 +10,7 @@ package homework27;
 import init.InitialWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pattern.pageobject.selenium.MainPage;
+import pattern.pagebject.selenium.MainPage;
 public class Rozetka5 extends InitialWebDriver {
 
     final String EXPECTED_TITLE = "Ноутбук Lenovo IdeaPad Slim 5 16IAH8 (83BG001ARA) Cloud Grey / 16\" IPS WUXGA / Intel Core i5-12450H / RAM 16 ГБ / SSD 512 ГБ / Підсвічування клавіатури / Зарядка через Type-C";

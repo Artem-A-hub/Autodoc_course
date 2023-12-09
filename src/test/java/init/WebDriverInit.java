@@ -17,7 +17,7 @@ public class WebDriverInit {
 
     @BeforeTest
     public void initDriver() {
-/*        WebDriverManager.chromedriver().setup();*/
+/*      WebDriverManager.chromedriver().setup();*/
         driver = new ChromeDriver();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }

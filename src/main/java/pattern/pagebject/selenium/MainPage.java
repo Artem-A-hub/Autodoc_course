@@ -1,9 +1,9 @@
-package pattern.pageobject.selenium;
+package pattern.pagebject.selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class MainPage extends pattern.pageobject.selenium.MainPageLocators implements ICartPage {
+public class MainPage extends pattern.pagebject.selenium.MainPageLocators implements ICartPage {
 
     private WebDriver driver;
 
@@ -26,9 +26,9 @@ public class MainPage extends pattern.pageobject.selenium.MainPageLocators imple
         return this;
     }
 
-    public pattern.pageobject.selenium.SearchPage clickBtnSearch() {
+    public pattern.pagebject.selenium.SearchPage clickBtnSearch() {
         driver.findElement(btnSearch).click();
-        return new pattern.pageobject.selenium.SearchPage(driver);
+        return new pattern.pagebject.selenium.SearchPage(driver);
     }
 
     public MainPage navigateToComputersAndLaptops() {

@@ -3,7 +3,7 @@ package lesson27;
 import init.InitialWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pattern.pageobject.selenium.MainPage;
+import pattern.pagebject.selenium.MainPage;
 
 public class FirstPageObjectTest extends InitialWebDriver {
 
