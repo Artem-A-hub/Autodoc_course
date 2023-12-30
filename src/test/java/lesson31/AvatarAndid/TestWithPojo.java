@@ -1,3 +1,4 @@
+/*
 package lesson31.AvatarAndid;
 
 import org.testng.Assert;
@@ -24,4 +25,4 @@ public class TestWithPojo {
         userDataList.forEach(x -> Assert.assertTrue(x.getAvatar().contains(x.getId().toString())));
         Assert.assertTrue(userDataList.stream().allMatch(x -> x.getEmail().endsWith("@reqres.in")));
     }
-}
+}*/

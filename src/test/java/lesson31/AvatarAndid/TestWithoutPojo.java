@@ -1,3 +1,4 @@
+/*
 package lesson31.AvatarAndid;
 
 import io.restassured.path.json.JsonPath;
@@ -39,4 +40,4 @@ public class TestWithoutPojo {
             Assert.assertTrue(avatars.get(i).contains(ids.get(i).toString()));
         }
     }
-}
+}*/

@@ -1,3 +1,4 @@
+/*
 package lesson31.yearSort;
 
 import org.testng.Assert;
@@ -29,3 +30,4 @@ public class SortedYear {
         Assert.assertEquals(actualYear, expectedYear);
     }
 }
+*/

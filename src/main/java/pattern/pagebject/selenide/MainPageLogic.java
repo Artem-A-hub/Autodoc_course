@@ -2,7 +2,9 @@ package pattern.pagebject.selenide;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
 
+import java.sql.SQLOutput;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.page;
@@ -21,4 +23,9 @@ public class MainPageLogic extends MainPageLocators {
         return page(CategoriesPageLogic.class);
     }
 
+    @Step("этот метод делает что-то с именем name")
+        public MainPageLogic someMethod(String name) {
+        System.out.println("do something with name " + name);
+        return this;
+    }
 }

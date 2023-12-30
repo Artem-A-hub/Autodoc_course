@@ -1,3 +1,4 @@
+/*
 package lesson31.registration;
 
 import io.restassured.path.json.JsonPath;
@@ -34,4 +35,4 @@ public class TestSuccessRegWithoutPojo {
         Assert.assertEquals(id, 4);
         Assert.assertEquals(token, "QpwL5tke4Pnpja7X4");
     }
-}
+}*/

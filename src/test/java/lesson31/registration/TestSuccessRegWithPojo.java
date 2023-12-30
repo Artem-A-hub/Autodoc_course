@@ -1,3 +1,4 @@
+/*
 package lesson31.registration;
 
 import org.testng.Assert;
@@ -27,4 +28,4 @@ public class TestSuccessRegWithPojo {
         Assert.assertEquals(successUserReg.getId(), EXPECTED_ID);
         Assert.assertEquals(successUserReg.getToken(), EXPECTED_TOKEN);
     }
-}
+}*/

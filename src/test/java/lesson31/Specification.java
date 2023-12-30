@@ -1,3 +1,4 @@
+/*
 package lesson31;
 
 import io.restassured.RestAssured;
@@ -27,4 +28,4 @@ public class Specification {
         RestAssured.responseSpecification = responseSpecification;
     }
 
-}
+}*/

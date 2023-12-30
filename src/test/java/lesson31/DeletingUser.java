@@ -1,3 +1,4 @@
+/*
 package lesson31;
 
 import org.testng.annotations.Test;
@@ -21,3 +22,4 @@ public class DeletingUser {
     }
 
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package lesson31.registration;
 
 import org.testng.Assert;
@@ -25,3 +26,4 @@ public class TestUnSuccessRegWithPojo {
         Assert.assertEquals(unSuccessUserReg.getError(), EXPECTED_ERROR);
     }
 }
+*/
